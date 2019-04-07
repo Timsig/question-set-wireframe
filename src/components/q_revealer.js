@@ -11,32 +11,49 @@ import Qselect from "./q_select"
 class Qrevealer extends Component {
   state = {
     height: 0,
+    inputValue: ""
   }
 
-  open = () => {
+  updateInputValue = (evt) => {
     this.setState({
-      height: "auto",
+      inputValue: evt.target.value
     })
   }
 
-  // var {id, question} = this.props;
+  open = () => {
+    if (/^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ]?)([0-9][a-zA-z][a-zA-z]){1}$/.test(this.state.inputValue)){
+      this.setState({
+        height: "auto",
+        error: false
+      })
+    }else{
+      this.setState({
+        error: true,
+        height: 0
+      })
+    }
+  }
+
+  
 
   render() {
+    const errorMessage = <div className="errorMessage">Please enter a valid UK postcode</div>
     return (
       <div className="qwrap qwrap-revealer">
         <label htmlFor={this.props.id}>{this.props.question}</label>
         <div className="inline-form-field">
-          <input id={this.props.id} type="text" />
+          <input id={this.props.id} type="text" value={this.state.inputValue} onChange={this.updateInputValue} size="9"/>
           <button onClick={this.open}>Submit</button>
         </div>
+        {this.state.error ? errorMessage : ""} 
         <AnimateHeight
           duration={500}
-          height={this.state.height} // see props documentation bellow
+          height={this.state.height} 
         >
           <Qselect
             id={this.props.selectId}
             question={this.props.selectQ}
-            options={this.props.selectOptions}
+            options={this.props.selectOptions}  
           />
         </AnimateHeight>
       </div>

@@ -8,6 +8,7 @@ import Qyesno from "../components/q_yesno"
 import Qbuttons from "../components/q_buttons"
 import Qrevealer from "../components/q_revealer"
 import Qcheckbox from "../components/q_checkbox"
+import Qselectclass from "../components/q_select-class"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 

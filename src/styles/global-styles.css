@@ -2,9 +2,9 @@
 Dark/ text: #333 
 header: silver
 container bg: #eee
-
-
 */
+
+/******* Generic and container rules *********/
 
 html {
   font-family: sans-serif;
@@ -49,6 +49,59 @@ main {
   padding: 0 10px 0 10px;
 }
 
+/******* Form field molecules general rules *********/
+
+input,
+textarea,
+select,
+label,
+button {
+  font-size: 16px;
+  display: block;
+  
+}
+
+input,
+textarea,
+select {
+  padding: 5px;
+}
+
+button {
+  padding: 0 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  line-height: 30px;
+  border-radius: 3px;
+}
+
+button:hover {
+  border: 1px #333 solid;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.qwrap-text label,
+.qwrap-select label,
+.qwrap-revealer label {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.errorMessage {
+  margin-top: 16px;
+  padding: 8px;
+  border: 1px solid #E03A3E;
+  border-radius: 3px;
+  color: #E03A3E;
+}
+
+/******* Form field wrappers *********/
+
 .questions-wrapper,
 h1 {
   max-width: 960px;
@@ -71,51 +124,10 @@ h1 {
 
 .inline-form-field {
   display: flex;
-  aign-items: center;
+  align-items: center;
 }
 
-/* .inline-radio-group {
-  display: flex;
-} */
-
-input,
-textarea,
-select,
-label,
-button {
-  font-size: 16px;
-  display: block;
-}
-
-button {
-  padding: 0 10px;
-}
-
-button:hover {
-  border: 1px #333 solid;
-}
-
-label {
-  margin-bottom: 10px;
-}
-
-.qwrap-text label,
-.qwrap-select label,
-.qwrap-revealer label {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-input,
-textarea,
-select {
-  padding: 5px;
-}
-
-button {
-  appearance: none;
-  cursor: pointer;
-}
+/******* Radio buttons group rules *********/
 
 .inline-radio-group input[type="radio"] {
   display: none;
@@ -144,6 +156,8 @@ button {
   color: #fff;
 }
 
+/******* Checkbox rules *********/
+
 .checkbox-wrap {
   display: flex;
   align-items: center;
@@ -156,12 +170,14 @@ button {
   width: 100%;
   line-height: 40px;
   border-bottom: 1px solid #fff;
+  cursor: pointer;
 }
 
 input[type="checkbox"] {
   z-index: 300;
   margin-left: 10px;
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked + label {
