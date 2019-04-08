@@ -4,9 +4,7 @@ const Qselect = ({ id, question, options }) => (
   <div className="qwrap qwrap-select">
     <label htmlFor={id}>{question}</label>
     <select id={id}>
-      <option value="" disabled>
-        -- Please select one --
-      </option>
+      <option value="">-- Please select one --</option>
       {options.map(option => {
         return (
           <option value={option} key={option}>
