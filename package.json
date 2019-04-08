@@ -1,9 +1,9 @@
 {
   "name": "question-set",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A series of react components to wireframe online journeys",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Tim Signore <timsignore@gmail.com>",
   "dependencies": {
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Timsig/question-set-wireframe.git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
