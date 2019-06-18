@@ -9,6 +9,7 @@ import Qbuttons from "../components/q_buttons"
 import Qrevealer from "../components/q_revealer"
 import Qcheckbox from "../components/q_checkbox"
 import Qselectclass from "../components/q_select-class"
+import Qprepop from "../components/q_prepop"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
@@ -34,6 +35,19 @@ const IndexPage = () => (
     />
     <Qtext id="firstName" question="First name" />
     <Qselect id="pet" question="Your pet" options={["dog", "cat", "bee"]} />
+    <section className="prepop-questions">
+      <Qprepop
+        id="mortgage"
+        textbefore="The home is"
+        options={["Owned with a mortgage", "Owned outright", "Rented"]}
+        textafter="or is it?"
+      />
+      <Qprepop
+        id="walls"
+        textbefore="The walls are made of"
+        options={["Brick", "Wood", "Concrete"]}
+      />
+    </section>
   </Layout>
 )
 

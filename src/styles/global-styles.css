@@ -58,7 +58,6 @@ label,
 button {
   font-size: 16px;
   display: block;
-  
 }
 
 input,
@@ -95,9 +94,9 @@ label {
 .errorMessage {
   margin-top: 16px;
   padding: 8px;
-  border: 1px solid #E03A3E;
+  border: 1px solid #e03a3e;
   border-radius: 3px;
-  color: #E03A3E;
+  color: #e03a3e;
 }
 
 /******* Form field wrappers *********/
@@ -125,6 +124,31 @@ h1 {
 .inline-form-field {
   display: flex;
   align-items: center;
+}
+
+/******* Pepopulated questioins *********/
+
+.prepop-questions {
+  padding: 20px 0 20px 0;
+}
+
+.prepop-wrap {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px 0 10px;
+  margin: 0;
+}
+
+.prepop-wrap select {
+  max-height: 21px;
+}
+
+.prepop-wrap * {
+  margin: 0 0 0 10px;
+}
+
+.prepop-wrap *:first-child {
+  margin-left: 0;
 }
 
 /******* Radio buttons group rules *********/
