@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Qtext from "../components/q_textinput"
@@ -9,45 +9,44 @@ import Qbuttons from "../components/q_buttons"
 import Qrevealer from "../components/q_revealer"
 import Qcheckbox from "../components/q_checkbox"
 import Qselectclass from "../components/q_select-class"
+import Qdate from "../components/q_date"
 import Qprepop from "../components/q_prepop"
+import Footer from "../components/footer"
+import Navbutton from "../components/molecules/navbutton"
+import Licence from "../components/q_licence"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout header="About you">
-    <Qcheckbox
-      id="todo"
-      question="Tick all that you would like to do"
-      options={["Buy yacht", "Achieve my potential", "Break bad"]}
+  <Layout
+    header="Tell us about you"
+    headerImage="https://res.cloudinary.com/lwcqviihu/image/upload/v1561038903/Question-set/Header_1.jpg"
+  >
+    <Qbuttons
+      id="title"
+      question="Title"
+      options={["Mr", "Mrs", "Miss", "Ms", "Dr"]}
     />
+    <Qtext id="firstName" question="First name" />
+    <Qtext id="surName" question="Surname" />
+    <Qdate id="DOB" question="Date of birth" />
     <Qrevealer
-      id="postcode"
-      question="Enter your postcode"
+      id="Address"
+      question="Your home address"
       selectId="address"
       selectQ="Please choose your address"
       selectOptions={["1 Amazing Road", "2 Amazing Road", "3 Amazing Road"]}
     />
-    <Qyesno id="yesOrNo" question="Will you marry me?" />
-    <Qbuttons
-      id="buttons"
-      question="What's your favourite flavour of crisps?"
-      options={["Salted", "Salt & vinegar", "Cheese & Onion", "Prefer peanuts"]}
-    />
-    <Qtext id="firstName" question="First name" />
-    <Qselect id="pet" question="Your pet" options={["dog", "cat", "bee"]} />
-    <section className="prepop-questions">
-      <Qprepop
-        id="mortgage"
-        textbefore="The home is"
-        options={["Owned with a mortgage", "Owned outright", "Rented"]}
-        textafter="or is it?"
-      />
-      <Qprepop
-        id="walls"
-        textbefore="The walls are made of"
-        options={["Brick", "Wood", "Concrete"]}
-      />
-    </section>
+    <Qtext id="email" question="Email address for your documents" />
+
+    <Footer>
+      <div className="navrow">
+        <Navbutton type="primary" to="/more-about-you" cta="Next >" />
+      </div>
+      <div className="saverow">
+        <Navbutton type="secondary" cta="Save" />
+      </div>
+    </Footer>
   </Layout>
 )
 

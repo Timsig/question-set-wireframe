@@ -17,6 +17,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1b1f21;
 }
 article,
 aside,
@@ -35,14 +36,15 @@ summary {
 
 header {
   width: 100%;
-  height: 60px;
-  background: silver;
+  min-height: 60px;
+  /* background: silver; */
 }
 
 .container {
   background: #eee;
-  /* width: 320px; */
+  width: 320px;
   margin: 0 auto;
+  position: relative;
 }
 
 main {
@@ -99,6 +101,14 @@ label {
   color: #e03a3e;
 }
 
+.successMessage {
+  margin-top: 16px;
+  padding: 8px;
+  border: 1px solid #189138;
+  border-radius: 3px;
+  color: #189138;
+}
+
 /******* Form field wrappers *********/
 
 .questions-wrapper,
@@ -111,6 +121,11 @@ h1 {
   background: #fff;
 }
 
+.questions-wrapper > h3,
+.questions-wrapper h4 {
+  margin-left: 10px;
+}
+
 .qwrap {
   border-bottom: 1px solid #eee;
   padding: 20px 10px 20px 10px;
@@ -121,9 +136,35 @@ h1 {
   padding: 20px 0px 20px 0px;
 }
 
-.inline-form-field {
+.licence .inline-form-field {
+  margin: 10px 0 10px 0;
+}
+
+.inline-form-field,
+.datewrap {
   display: flex;
   align-items: center;
+}
+
+.datewrap #DOB-day,
+.datewrap #DOB-month {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+.datewrap #DOB-year {
+  max-width: 80px;
+}
+
+.image-wrap {
+  width: 320px;
+  margin: 0 auto 0 auto;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.image-wrap img {
+  width: 100%;
 }
 
 /******* Pepopulated questioins *********/
@@ -133,18 +174,20 @@ h1 {
 }
 
 .prepop-wrap {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* align-items: center; */
   padding: 20px 10px 0 10px;
   margin: 0;
 }
 
 .prepop-wrap select {
   max-height: 21px;
+  display: inline-block;
 }
 
 .prepop-wrap * {
-  margin: 0 0 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .prepop-wrap *:first-child {
@@ -168,6 +211,10 @@ h1 {
   margin-right: 10px;
   border: 1px #eee solid;
   border-radius: 3px;
+}
+
+.numbers label {
+  margin-right: -1px;
 }
 
 .inline-radio-group label:hover {
@@ -208,4 +255,62 @@ input[type="checkbox"]:checked + label {
   background: #333;
   color: #fff;
   border-radius: 3px;
+}
+
+/******* Footer rules *********/
+footer {
+  background-color: #eee;
+  min-height: 60px;
+  padding: 20px 0 20px 0;
+}
+
+.navrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.saverow {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+/******* navbutton rules *********/
+
+.primary {
+  background-color: #333;
+  color: #fff;
+}
+
+.secondary {
+}
+
+.disabled {
+  color: #333;
+  background-color: #eee;
+  border: none;
+}
+
+.disabled:hover {
+  border: none;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/******************************************CAR***********************************/
+
+.licenceno {
+  margin-right: 10px;
 }
